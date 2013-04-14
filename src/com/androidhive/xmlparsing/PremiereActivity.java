@@ -38,9 +38,7 @@ public class PremiereActivity extends ListActivity {
 	static final String PRIX = "prix";
 	static final String AUT = "auteur";
 	static final String RESUM = "resume";
-	static final String STOCK = "stock";
 	static final String EDIT = "editeur";
-	static final String REM = "remarque";
 	
 
 	@Override
@@ -89,8 +87,6 @@ public class PremiereActivity extends ListActivity {
 			map.put(AUT, "Auteur : " + parser.getValue(e, AUT));
 			map.put(EDIT, "Editeur : " + parser.getValue(e, EDIT));
 			map.put(RESUM, parser.getValue(e, RESUM));
-			map.put(STOCK, "Stock :" + parser.getValue(e, STOCK));
-			map.put(REM, "Remarques :" + parser.getValue(e, REM));
 
 			// adding HashList to ArrayList
 			menuItems.add(map);
@@ -99,8 +95,8 @@ public class PremiereActivity extends ListActivity {
 		// Adding menuItems to ListView
 		ListAdapter adapter = new SimpleAdapter(this, menuItems,
 				R.layout.list_item,
-				new String[] { NOM, AUT, EDIT, PRIX, RESUM, STOCK, REM }, new int[] {
-						R.id.nom, R.id.auteur, R.id.editeur, R.id.prix, R.id.resume, R.id.stock, R.id.remarque });
+				new String[] { NOM, AUT, EDIT, PRIX, RESUM }, new int[] {
+						R.id.nom, R.id.auteur, R.id.editeur, R.id.prix, R.id.resume });
 
 		setListAdapter(adapter);
 
@@ -117,8 +113,6 @@ public class PremiereActivity extends ListActivity {
 				String auteur = ((TextView) view.findViewById(R.id.auteur)).getText().toString();
 				String editeur = ((TextView) view.findViewById(R.id.editeur)).getText().toString();
 				String resume = ((TextView) view.findViewById(R.id.resume)).getText().toString();
-				String stock = ((TextView) view.findViewById(R.id.stock)).getText().toString();
-				String remarque = ((TextView) view.findViewById(R.id.remarque)).getText().toString();
 				
 				
 				Intent in = new Intent(getApplicationContext(), SecondaireActivity.class);
@@ -127,8 +121,6 @@ public class PremiereActivity extends ListActivity {
 				in.putExtra(AUT, auteur);
 				in.putExtra(EDIT, editeur);
 				in.putExtra(RESUM, resume);
-				in.putExtra(STOCK, stock);
-				in.putExtra(REM, remarque);
 				startActivity(in);
 
 			}
