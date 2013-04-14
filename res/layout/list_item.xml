@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:orientation="horizontal" >
+  
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+        <!-- NOM -->
+        
+        <TextView
+            android:id="@+id/nom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingTop="6dip"
+            android:paddingBottom="2dip" />
+        
+        <!-- AUTEUR -->
+        
+        <TextView
+            android:id="@+id/auteur"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#acacac"
+            android:paddingBottom="2dip">
+        </TextView>
+        
+        <!-- EDITEUR -->
+        
+        <TextView
+            android:id="@+id/editeur"
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:textColor="#acacac"
+            android:paddingBottom="2dip">
+        </TextView>
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+        
+        <!-- PRIX -->
+            
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#5d5d5d"
+            android:gravity="left"
+            android:textStyle="bold"
+            android:text="Prix: " >
+        </TextView>
+        <TextView
+            android:id="@+id/prix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff" 
+            android:textStyle="bold"
+            android:gravity="left">
+        </TextView>
+        
+        <!-- RESUME -->
+        
+        <TextView
+            android:id="@+id/resume"
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:textColor="#acacac" 
+            android:textStyle="bold"
+            android:gravity="left">
+        </TextView>
+        
+        <!-- STOCK -->
+        
+        <TextView
+            android:id="@+id/stock"
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:textColor="#acacac" 
+            android:textStyle="bold"
+            android:gravity="left">
+        </TextView>
+        
+        <TextView
+            android:id="@+id/remarque"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#acacac"
+            android:textStyle="bold"
+            android:paddingLeft="10px" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
